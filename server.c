@@ -81,7 +81,7 @@ int main() {
             perror("pselect error"); 
             exit(EXIT_FAILURE); 
             }
-        if (errno == ENITR){
+        if (errno == EINTR){
         	if(wasSigHup==1){
         		printf("SIGHUP received.\n");
   			wasSigHup = 0;
